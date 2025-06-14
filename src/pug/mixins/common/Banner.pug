@@ -1,0 +1,9 @@
+mixin Banner(config) 
+  +Section(
+    { image: `${CWD}assets/img/${config.img || 'about_team.jpg'}`, className: "overlay overlay-1", attrs: {"data-parallax": true, "data-rellax-percentage":'0.5'}}
+
+  )(data-zanim-timeline!={} data-zanim-trigger="scroll").py-10.overflow-hidden.text-center
+    .overflow-hidden
+      h1.fs-5.fs-sm-6.text-white.mb-3(data-zanim-xs!={delay: 0.0})=config.title
+    .overflow-hidden
+      h4.ls.fw-light.text-uppercase.text-300.mb-0(data-zanim-xs!={delay: 0.1})=config.subtitle

@@ -1,0 +1,8 @@
+mixin PageHeader(config)
+	+Section(
+		{ image: `${CWD}assets/img/${config.img || 'banner_1.jpg'}`, className: "overlay overlay-1", attrs: {"data-parallax": true}}
+	)(data-zanim-timeline!={} data-zanim-trigger="scroll").py-9.overflow-hidden.text-center
+		.overflow-hidden
+			h1.fs-5.fs-sm-6.text-white.mb-3(data-zanim-xs!={delay: 0.0})=config.title
+		.overflow-hidden
+			p.fs-2.fw-light.ls.text-400.text-uppercase(data-zanim-xs!={delay: 0.1})=config.subtitle

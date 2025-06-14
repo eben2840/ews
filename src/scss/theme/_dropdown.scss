@@ -1,0 +1,90 @@
+/*-----------------------------------------------
+|   Dropdown
+-----------------------------------------------*/
+
+.dropdown-menu {
+  &.show {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: dropdownFadeIn;
+  }
+}
+
+@keyframes dropdownFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
+@mixin dropdown-indicator {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.46rem;
+  width: 0.46rem;
+  border: none;
+  border-right: 2px solid rgba($primary, 0.55);
+  border-bottom: 2px solid rgba($primary, 0.55);
+  border-radius: 0.063rem;
+  transition: $transition-base;
+  transform-origin: center;
+  transition-property: transform, border-color, right, top;
+}
+
+.dropdown {
+  .dropdown-indicator {
+    position: relative;
+    &:after {
+      @include dropdown-indicator;
+      right: 0.563rem;
+      top: 47%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:hover{
+      &:after {
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+.dropend {
+  .dropdown-indicator {
+    position: relative;
+    &:after {
+      @include dropdown-indicator;
+      right: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &:hover{
+      &:after {
+        right: 0.8rem;
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+
+.dropdown-caret-none {
+  &:after, &:before {
+    display: none !important;
+  }
+}
+
+.dropdown-md {
+  min-width: 16.625rem;
+}
+
+.dropdown-item{
+  font-weight: $font-weight-medium;
+}

@@ -1,0 +1,71 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Navbar                                   */
+/* -------------------------------------------------------------------------- */
+
+.navbar-freya {
+	background: var(--#{$variable-prefix}bg-navbar-glass);
+	margin: 1.25rem auto;
+	color: $primary;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	// padding: 0.063rem;
+	letter-spacing: 0.01rem;
+	border-radius: $border-radius-lg;
+
+
+	.dropdown-menu{
+		box-shadow: none !important;
+		padding-left: $spacer * 1.2;
+
+		@include media-breakpoint-up(lg){
+			padding-left: 0;
+			box-shadow: $box-shadow-sm !important;
+		}
+	}
+}
+
+.hamburger{
+	padding: 0.5rem;
+	transform: translateY(-5px);
+	.hamburger-box{
+		height: 0;
+		width: 1.875rem;
+		.hamburger-inner{
+			&, &::after, &::before{
+				width: 100%;
+				height: 0.063rem;
+				border-radius: $border-radius;
+				background-color: currentColor;
+			}
+		}
+	}
+
+	&.is-active {
+		.hamburger-inner { 
+			background-color: transparent; 
+		} 
+	}
+}
+
+.hamburger-inner::before {
+	top: -7px; 
+}
+
+.hamburger--emphatic .hamburger-inner::after { 
+	top: 7px; 
+}
+
+
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.freya-logo {
+	background: var(--#{$variable-prefix}1100);
+	border-radius: $border-radius-lg;
+	border-bottom-right-radius: 0;
+	line-height: 1;
+	color: var(--#{$variable-prefix}white);
+	font-size: map-get($font-sizes, 0);
+	text-transform: uppercase;
+	padding: 7px 10px 7px 13px;
+}

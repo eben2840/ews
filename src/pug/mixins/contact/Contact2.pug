@@ -1,0 +1,66 @@
+mixin Contact2 
+  +Section.bg-100 
+    .row.align-items-stretch.justify-content-center
+      .col-lg-4.mb-4
+        .row
+          .col-md-6.col-lg-12.mb-4
+            .card.rounded-0
+              .card-body.px-5.py-4  
+                h5.mb-3 Manitoba Office
+                | 121 King's Street,
+                br
+                | Manitoba 1230, Canada
+                br
+                | Cell: 
+                a(href="tel:+47535383458") +475 3538 3458
+
+          .col-md-6.col-lg-12.mb-4
+            .card.rounded-0
+              .card-body.px-5.py-4
+                h5.mb-3 Brooklyn Office
+                | 62 Collins Street West,
+                br
+                | Brooklyn 3030, USA
+                br
+                | Cell: 
+                a(href="tel:+47523433421") +475 2343 3421
+          .col-12
+            .card.rounded-0
+              .card-body.px-5.py-4
+                h5 Socials
+                a(href="#!").d-inline-block.mt-2
+                  span.fab.fa-linkedin.fs-2.me-2.text-primary(data-fa-transform="shrink-1")
+                a(href="#!").d-inline-block.mt-2
+                  span.fab.fa-twitter-square.fs-2.mx-2.text-primary(data-fa-transform="shrink-1")
+                a(href="#!").d-inline-block.mt-2
+                  span.fab.fa-facebook-square.fs-2.mx-2.text-primary(data-fa-transform="shrink-1")
+                a(href="#!").d-inline-block.mt-2
+                  span.fab.fa-google-plus-square.fs-2.ms-2.text-primary(data-fa-transform="shrink-1")
+
+      .col-lg-8.mb-4
+        .card.rounded-0
+          .card-body.p-5
+            .googlemap(data-latlng='48.8583701,2.2922873,17' data-scrollwheel='false' data-icon=`${CWD}assets/img/map-marker.png` data-zoom='13' data-theme='Default' style="min-height: 427.77px;")
+              .marker-content.py-3
+                h5 Eiffel Tower
+                p
+                  | Gustave Eiffel's iconic, wrought-iron 1889 tower,
+                  br
+                  |  with steps and elevators to observation decks.
+
+      .col-12
+        .card.rounded-0
+          .card-body.p-5
+            h4 Write to us
+            form.mt-3
+              .row
+                .col-12
+                  input(type="text" placeholder="Your Name" required).form-control.bg-white
+                .col-12.mt-4
+                  input(type="email" placeholder="Email" required).form-control.bg-white
+                .col-12.mt-4
+                  textarea(rows="11" placeholder="Enter your descriptions here..." required).form-control.bg-white
+                .col-12.mt-4
+                  button.btn.btn-primary(type="Submit") 
+                    span.text-white.fw-semi-bold Send Now
+

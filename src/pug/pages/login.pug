@@ -1,0 +1,15 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Login
+
+
+block beforeMainContent
+
+append mainContent
+  +Navbar
+  +Login
+
+  +PreFooter 
+  +Footer
+
+
+block afterMainContent

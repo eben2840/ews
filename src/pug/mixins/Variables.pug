@@ -1,0 +1,182 @@
+append variables
+  - var title = 'Freya | Website, template crafting machine';
+  - var name = 'Freya';
+  - var theme = `${name}-${version}`;
+  - var bootstrapVersion = '5.1';
+  - var attrsMain = { id: 'top', class: 'main' };
+  - var attrsLayout = { class: 'container', 'data-layout': 'container' }
+  - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+  - var grays = ['black', 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100, 'white'];
+  - var colorsAll = colors.concat(grays);
+  -
+    var themeColor =  {
+      primary: '#161820',
+      secondary: '#6c757d',
+      success: '#4CD964',
+      info: '#2eb7f5',
+      warning: '#FF9500',
+      danger: '#FF3B30',
+      light: '#fafafa',
+      dark: '#1f1f1f',
+    }
+
+  - var footer = true;
+  - var pathName = (locals.filename || locals.history[0]).split('\\').join('/').split('src/pug/').pop().split('.pug').shift();
+  - var pageTree = pathName.split('/');
+  - var CWD = pageTree.slice(1).map(() => '../').join('');
+
+  -
+    var sitemap = [
+      {
+        name: "Home",
+        pages: [
+          {
+            name: "Slider Header",
+            path: "index"
+          },
+          {
+            name: "Slider Classic",
+            path: "homes/header-slider-classic"
+          },
+          {
+            name: "Static Header",
+            path: "homes/header-static"
+          },
+          {
+            name: "Static Classic",
+            path: "homes/header-static-classic"
+          },
+          {
+            name: "Youtube Background",
+            path: "homes/header-youtube-video"
+          },
+          {
+            name: "Youtube Classic",
+            path: "homes/header-youtube-video-classic"
+          },
+          {
+            name: "Self-hosted Video",
+            path: "homes/header-selfhosted-video"
+          },
+          {
+            name: "Self-hosted Classic",
+            path: "homes/header-selfhosted-video-classic"
+          }
+        ]
+      },
+      {
+        name: "Pages",
+        pages: [
+          {
+            name: "About",
+            path: "pages/about"
+          },
+          {
+            name: "Recognition",
+            path: "pages/recognition"
+          },
+          {
+            name: "Blank Page",
+            path: "pages/blank"
+          },
+          {
+            name: "404 Page",
+            path: "pages/404"
+          },
+          {
+            name: "Account",
+            pages: [
+              {
+                name: "Login",
+                path: "pages/login"
+              },
+              {
+                name: "Registration",
+                path: "pages/registration"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: "Projects",
+        pages: [
+          {
+            name: "Projects Gallery",
+            path: "projects/projects"
+          },
+          {
+            name: "Single Project",
+            path: "projects/project"
+          }
+        ]
+      },
+      {
+        name: "Blog",
+        pages: [
+          {
+            name: "Blog List",
+            path: "blog/blog-list"
+          },
+          {
+            name: "Single Blog",
+            path: "blog/blog"
+          }
+        ]
+      },
+      {
+        name: "Contact",
+        pages: [
+          {
+            name: "Contact 1",
+            path: "contact/contact1"
+          },
+          {
+            name: "Contact 2",
+            path: "contact/contact2"
+          }
+        ]
+      },
+      {
+        name: "Elements",
+        pages: [
+          {
+            name: "Buttons",
+            path: "elements/buttons"
+          },
+          {
+            name: "Colors",
+            path: "elements/colors"
+          },
+          {
+            name: "Google Map",
+            path: "elements/googlemap"
+          },
+          {
+            name: "Grid",
+            path: "elements/grid"
+          },
+          {
+            name: "Icons",
+            path: "elements/icons"
+          },
+          {
+            name: "Layout Helpers",
+            path: "elements/layouthelpers"
+          },
+          {
+            name: "Modal Video",
+            path: "elements/modal-video"
+          },
+          {
+            name: "Swiper",
+            path: "elements/swiper"
+          },
+          {
+            name: "Typography",
+            path: "elements/typography"
+          }
+        ]
+      }
+    ];
+

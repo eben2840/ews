@@ -1,0 +1,22 @@
+extends ../layouts/LayoutPages
+include ../mixins/pages/about/AboutIntro
+include ../mixins/pages/about/Associates
+include ../mixins/pages/about/Partners
+include ../mixins/pages/about/Jobs
+
+append variables 
+  - var pageHeaderConfig = { img: "about_header.jpg", title: "Stylish Interior", subtitle: "is The Symbol of Elegance" }
+
+
+append mainContent
+  +AboutIntro
+
+  +Banner({img: "about_team.jpg", title: "Our People", subtitle: "Are Always Up For The Challenge"})
+
+  +Associates
+
+  +Partners
+
+  +Banner({img: "about_careers.jpg", title: "Recruitments", subtitle: "WE'RE ALWAYS HIRING"})
+
+  +Jobs

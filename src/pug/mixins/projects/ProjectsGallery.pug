@@ -1,0 +1,89 @@
+mixin ProjectsGallery
+  - 
+    var projects = [
+      {
+        title: "Inspiration: Go green",
+        place: "Brooklyn, USA",
+        link: "project.html",
+        img: "contacts_header.jpg",
+        desc1: "Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur.",
+        desc2: "Nam vel orci in lacus aliquet viverra et a justo. Fusce gravida felis eu leo fringilla dapibus. Vivamus molestie dictum aliquet. Nunc nec nisl nulla. Integer gravida quam et sem egestas, nec dictum enim interdum. Suspendisse volutpat diam urna, et imperdiet lectus pharetra sit amet. Nunc sed ex et neque vulputate dignissim. Nullam a tempus lacus, ac pulvinar mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis eget erat a molestie. Suspendisse sed scelerisque lectus, eget ornare elit. Donec non lectus non enim fermentum dapibus vel sit amet dolor. Praesent a vestibulum massa. "
+      },
+      {
+        title: "Cozy coffee shop look",
+        place: "Wyoming, USA",
+        link: "project.html",
+        img1: "img_4.jpg",
+        img2: "img_5.jpg",
+        desc: "In quis porttitor orci, vitae rhoncus nunc. Vivamus tincidunt ac purus at efficitur. Donec sed faucibus sem, nec pharetra ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sodales sollicitudin ante ac molestie. Aliquam scelerisque metus in ultricies venenatis. Duis in nisi felis. Donec a nibh blandit, semper eros hendrerit, vestibulum ex. Pellentesque tincidunt purus lacus, quis luctus velit auctor quis. "
+      },
+      {
+        title: "Renovation on going",
+        place: "Alberta, Canada",
+        link: "project.html",
+        img: "about_header.jpg",
+        desc: "Proin et neque in diam auctor facilisis a ut risus. Etiam eleifend mi ex. Praesent ac ullamcorper urna, nec placerat arcu. Nunc placerat aliquam congue. Aenean at urna ac ipsum semper luctus. Aenean a sem nibh. Maecenas velit ex, feugiat eget neque non, semper condimentum nisl. Donec convallis venenatis quam sed placerat. "
+      },
+      {
+        title: "Living Luxuriously",
+        place: "Bloemfontein, South Africa",
+        link: "project.html",
+        img: "img_10.jpg",
+        desc: "Suspendisse rutrum lacinia orci, at fermentum dolor. Donec odio sem, pulvinar at ornare a, feugiat et justo. In eget convallis urna. Nulla ac nunc id tellus aliquet convallis eu a dui. Donec pellentesque vehicula elit in eleifend. Duis ut faucibus arcu. Curabitur tincidunt risus id luctus tincidunt. Integer ac consectetur magna. Etiam at est et sapien aliquam volutpat. In tempor lacus ut placerat gravida. Fusce ultrices et odio mattis imperdiet. Proin eleifend diam a pharetra consequat. Ut varius efficitur ante vel viverra. Nunc cursus ligula felis, sed lobortis velit ultrices. "
+      }
+    ]
+  +Section 
+    .row.justify-content-center
+      .col-lg-11
+        each project in projects 
+          +GalleryItem(project)
+
+    .row.justify-content-center.text-center
+      .col-lg-auto
+        nav
+          ul.pagination.font-base
+            li.page-item
+              a.page-link(href='#!')
+                span(aria-hidden='true') «
+                span.sr-only Previous
+            li.page-item.active
+              a.page-link(href='#!') 1
+            li.page-item
+              a.page-link(href='#!') 2
+            li.page-item
+              a.page-link(href='#!') 3
+            li.page-item
+              a.page-link(href='#!' aria-label='Next')
+                span(aria-hidden='true') »
+                span.sr-only Next
+
+
+mixin GalleryItem(config) 
+  .border-bottom.border-300.pb-6.mb-6
+    .row.justify-content-center
+      .col-lg-4
+        h4.mb-2.fw-light
+          a(href=`${CWD}projects/${config.link}`)
+            span.d-inline-block=config.title
+        p=config.place
+      .col.text-center.text-lg-start
+        if config.img1 && config.img2 
+          a(href=`${CWD}projects/${config.link}`).row
+            .col-lg-6.mb-4
+              img(src=`${CWD}assets/img/${config.img1}` class="img-fluid" alt="gallery")
+            .col-lg-6.mb-4 
+              img(src=`${CWD}assets/img/${config.img2}` class="img-fluid" alt="gallery")
+        else 
+          a(href=`${CWD}projects/${config.link}`).mb-4.d-block
+            img(src=`${CWD}assets/img/${config.img}` class="img-fluid" alt="gallery")
+
+        if config.desc1 && config.desc2
+          p.text-justify=config.desc1
+          p.mb-0.text-justify=config.desc2 
+            a.text-info(href=`${CWD}projects/${config.link}`) Continue reading 
+              span.d-inline-block &xrarr;
+
+        else 
+          p.mb-0.text-justify=config.desc 
+            a.text-info(href=`${CWD}projects/${config.link}`) Continue reading 
+              span.d-inline-block &xrarr;

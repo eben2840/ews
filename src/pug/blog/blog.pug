@@ -1,0 +1,12 @@
+extends ../layouts/LayoutTheme
+include ../mixins/blog/Blog
+
+block beforeMainContent
+  +Navbar
+
+append mainContent
+  +Blog
+
+block afterMainContent
+  +PreFooter
+  +Footer

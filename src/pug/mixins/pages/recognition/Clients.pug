@@ -1,0 +1,47 @@
+mixin Clients 
+  - 
+    var clients = [
+      {
+        img: "ad.png",
+        width: 120
+      },
+      {
+        img: "american_express.gif",
+        width: 180
+      },
+      {
+        img: "departures.png",
+        width: 160
+      },
+      {
+        img: "goldlist.jpg",
+        width: 120
+      },
+      {
+        img: "interiordesign.png",
+        width: 150
+      },
+      {
+        img: "luxe.jpg",
+        width: 150
+      },
+      {
+        img: "robb_report.jpg",
+        width: 170
+      },
+      {
+        img: "wsj.jpg",
+        width: 100
+      }
+    ]
+
+  .row.justify-content-center.mt-6
+    each client in clients 
+      +Client(client)
+
+
+
+mixin Client(config)
+  .col-6.col-md-4.col-lg-3.mb-4
+    .client-logo
+      img(src=`${CWD}assets/img/logo/${config.img}` alt="brand logo" width=`${config.width}`)

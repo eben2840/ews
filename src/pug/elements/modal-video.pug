@@ -1,0 +1,16 @@
+extends ../layouts/LayoutPages
+include ../mixins/elements/ModalVideo
+include ../mixins/common/BlockHeader
+include ../mixins/common/CodePreviewBlock
+
+prepend scripts
+  script(src=`${CWD}vendors/bigpicture/BigPicture.js`) 
+
+append variables 
+  - var pageHeaderConfig = { title: "Modal Video", subtitle: "Modular elements", img: "elements_header.jpg" }
+
+append mainContent
+  +Section
+    .row.justify-content-center 
+      .col-lg-10
+        +ModalVideo

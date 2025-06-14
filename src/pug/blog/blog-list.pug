@@ -1,0 +1,10 @@
+extends ../layouts/LayoutPages
+include ../mixins/Common/Banner
+include ../mixins/blog/BlogList
+
+append variables 
+  - var pageHeaderConfig = { img: "blog_header.jpg", title: "Design Blog", subtitle: "Thoughts & Musings" }
+
+
+append mainContent
+  +BlogList

@@ -1,0 +1,99 @@
+mixin BlogList 
+  +Section.text-center 
+    .row.justify-content-center
+      .col-lg-8.col-md-10
+        div
+          a(href=`${CWD}blog/blog.html`).text-500 Architecture
+          h2
+            a(href=`${CWD}blog/blog.html`).fw-light
+              span.d-inline-block.text-black Inspiration: minsat
+          .mb-4
+            a(href="#!").text-500 George Bellaroza
+            span.px-2 . 
+            a(href="#!").text-500 December 13, 2017
+
+          .text-justify
+            p.mb-4 Who's your source of inspiration when it comes to architectural design? Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+
+            img(src=`${CWD}assets/img/blog_01.jpg` class="img-fluid" alt="blog")
+
+            p.mt-4 Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+
+            p Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. 
+              a.text-info(href=`${CWD}blog/blog.html`) Continue reading 
+                span.d-inline-block &xrarr;
+
+        .mt-8
+          a(href=`${CWD}blog/blog.html`).text-500 Interiors
+          h2
+            a(href=`${CWD}blog/blog.html`).fw-light
+              span.d-inline-block.text-black Mid-Century Classics
+          .mb-4
+            a(href="#!").text-500 Shaun Bean
+            span.px-2 . 
+            a(href="#!").text-500 December 9, 2017
+
+          .text-justify
+            p.mb-4 Structural beauty of mid century is Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. 
+              a.text-info(href=`${CWD}blog/blog.html`) Continue reading 
+                span.d-inline-block &xrarr;
+
+            img(src=`${CWD}assets/img/blog_02.jpg` class="img-fluid" alt="blog")
+
+        .mt-8
+          a(href=`${CWD}blog/blog.html`).text-500 Interiors
+          h2
+            a(href=`${CWD}blog/blog.html`).fw-light
+              span.d-inline-block.text-black Beauty of Abstracts
+          .mb-4
+            a(href="#!").text-500 Alex Hogg
+            span.px-2 . 
+            a(href="#!").text-500 December 1, 2017
+
+          .text-justify
+            p.mb-4 Ceramics represent excellence nowadays Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
+              a.text-info(href=`${CWD}blog/blog.html`) Continue reading 
+                span.d-inline-block &xrarr;
+
+            .row
+              .col-md-6.mb-4.mb-md-0
+                img(src=`${CWD}assets/img/blog_03.jpg` class="img-fluid" alt="blog")
+              .col-md-6
+                img(src=`${CWD}assets/img/blog_04.jpg` class="img-fluid" alt="blog")
+
+        .mt-8
+          a(href=`${CWD}blog/blog.html`).text-500 News
+          h2
+            a(href=`${CWD}blog/blog.html`).fw-light
+              span.d-inline-block.text-black Project: Beverly Hills
+          .mb-4
+            a(href="#!").text-500 Mathew Jones
+            span.px-2 . 
+            a(href="#!").text-500 October 22, 2017
+
+          .text-justify
+            p.mb-4 Have you heard of the recent Beverly Hills project? Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
+              a.text-info(href=`${CWD}blog/blog.html`) Continue reading 
+                span.d-inline-block &xrarr;
+
+            img(src=`${CWD}assets/img/blog_05.jpg` class="img-fluid" alt="blog")
+
+
+    .row.justify-content-center.text-center.mt-6
+      .col-lg-auto
+        nav.d-inline-block
+          ul.pagination.font-base
+            li.page-item
+              a.page-link(href='#!')
+                span(aria-hidden='true') «
+                span.sr-only Previous
+            li.page-item.active
+              a.page-link(href='#!') 1
+            li.page-item
+              a.page-link(href='#!') 2
+            li.page-item
+              a.page-link(href='#!') 3
+            li.page-item
+              a.page-link(href='#!' aria-label='Next')
+                span(aria-hidden='true') »
+                span.sr-only Next

@@ -1,0 +1,74 @@
+mixin Partners
+  - 
+    var partners = [
+      {
+        name: "Eduardo Gurrerro",
+        designation: "Senior Architect"
+      },
+      {
+        name: "Cathy Williams",
+        designation: "Senior Designer"
+      },
+      {
+        name: "Michele Kasperwich",
+        designation: "Designer"
+      },
+      {
+        name: "Brandon Tylor",
+        designation: "Business Development"
+      },
+      {
+        name: "Elisa Toyoung",
+        designation: "Architect"
+      },
+      {
+        name: "Jamie Dupis",
+        designation: "Senior Designer"
+      },
+      {
+        name: "Doglous Moor",
+        designation: "Photographer"
+      },
+      {
+        name: "Terry Hagan",
+        designation: "IT Manager"
+      },
+      {
+        name: "Andrew Simmons",
+        designation: "Architect"
+      },
+      {
+        name: "Tracy Chapman",
+        designation: "Designer"
+      },
+      {
+        name: "Arif Tagore",
+        designation: "Business Development"
+      },
+      {
+        name: "Alex Hails",
+        designation: "Office Manager"
+      },
+      {
+        name: "Ana Kurnikova",
+        designation: "Designer"
+      },
+      {
+        name: "Santiago Munez",
+        designation: "Business Development"
+      },
+    ]
+
+  +Section.pt-0 
+    h2.text-center Partners & Staffs
+    .row.justify-content-center
+      .col-lg-11.mt-4
+        .row 
+          each partner in partners 
+            +Partner(partner)
+
+
+mixin Partner(config) 
+  .col-lg-3.col-sm-6
+    h5.text-black.mt-4.mb-1=config.name
+    p.mb-0=config.designation

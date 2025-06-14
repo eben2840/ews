@@ -1,0 +1,55 @@
+mixin Navbar 
+  .fixed-top
+    .container.px-0 
+      nav.navbar.navbar-expand-lg.navbar-freya.navbar-light 
+        a.navbar-brand(href=`${CWD}index.html`)
+          .freya-logo Freya
+          //- img(src=`${CWD}assets/img/logo-freya.png` width="58" alt="Freya")
+        button.navbar-toggler.p-0.border-0(type='button' data-bs-toggle='collapse' data-bs-target='#primaryNavbarCollapse' aria-controls='primaryNavbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+          span.hamburger.hamburger--emphatic
+            span.hamburger-box
+              span.hamburger-inner
+        #primaryNavbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.py-3.py-lg-0.mt-1.mb-2.my-lg-0.ms-lg-n1
+            each menu in sitemap
+              if menu.pages
+                li.nav-item.dropdown
+                  a.nav-link.dropdown-toggle.dropdown-indicator(href="JavaScript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false")= menu.name
+                  ul.dropdown-menu
+                    each submenu in menu.pages 
+                      if submenu.pages 
+                        +nestedDropdown(submenu)
+                      else 
+                        li
+                          a.dropdown-item(href=`${CWD}${submenu.path}.html`)=submenu.name
+
+              else 
+                li.nav-item
+                  a.nav-link(href=`${CWD}${menu.path}.html` role="button")=menu.name
+
+          ul.navbar-nav.ms-lg-auto.flex-row.justify-content-center.py-3.py-lg-0.me-n2
+            li
+              a(href='#').nav-link.px-2
+                span.fab.fa-facebook-f(data-fa-transform="shrink-2")
+            li
+              a(href='#').nav-link.px-2
+                span.fab.fa-twitter(data-fa-transform="shrink-2")
+            li
+              a(href='#').nav-link.px-2
+                span.fab.fa-instagram(data-fa-transform="shrink-2")
+            li
+              a(href='#').nav-link.px-2
+                span.fab.fa-dribbble(data-fa-transform="shrink-2")
+
+
+
+mixin nestedDropdown(submenu) 
+  li.dropend
+    a.dropdown-item.dropdown-toggle.dropdown-indicator(href="JavaScript:void(0)" data-bs-toggle="dropdown" aria-expanded="false")=submenu.name
+    ul.dropdown-menu
+      each nestedSubmenu in submenu.pages 
+        if nestedSubmenu.pages 
+          +nestedDropdown(nestedSubmenu)
+        else 
+          li 
+            a.dropdown-item(href=`${CWD}${nestedSubmenu.path}.html`)=nestedSubmenu.name

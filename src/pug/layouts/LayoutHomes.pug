@@ -1,0 +1,65 @@
+extends LayoutTheme
+include ../mixins/Common/Banner
+include ../mixins/homes/GalleryBlock
+include ../mixins/homes/Features
+
+prepend styles
+  link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`, rel='stylesheet')
+
+prepend scripts
+  script(src=`${CWD}vendors/bigpicture/BigPicture.js`) 
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+
+
+append mainContent
+  block homeBanner 
+
+  +Features
+
+  +Banner({title: "Museo", subtitle: "Manitoba", img: "banner_1.jpg"})
+
+  +GalleryBlock({title: "A coffee shop gains a warmer look", text: "Museo coffees got in touch with Freya for their renovation. We took over and asked them to have a cup of coffee for themselves while the job is done! Sed posuere consectetur est at lobortis. Fusce dapibs, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Pellentsque ornare se lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."})
+    .row
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_4.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_5.jpg` alt="gallery image")
+      .col-12.mb-4
+        img.w-100(src=`${CWD}assets/img/img_6.jpg` alt="gallery image")
+
+  +Banner({title: "A Touch of Green", subtitle: "in Brooklyn", img: "banner_2.jpg"})
+
+  +GalleryBlock({title: "A Brooklyn space becomes greener than ever.", text: "With Freya's magical touch, a office space at Brooklyn becomes greener than ever. Cras matti consectetur purus st amet fermentum. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia qua venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula neget."})
+    .row
+      .col-12.mb-4
+        img.w-100(src=`${CWD}assets/img/img_7.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_8.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_9.jpg` alt="gallery image")
+
+  +Banner({title: "Prestana Remereo", subtitle: "Rio De Janeiro", img: "banner_3.jpg"})
+
+  +GalleryBlock({title: "Prestana Remereo deserved a coat of paint", text: "Prestana Remereo wanted renovation, we simply delivered. Nullam quis risus eget urna mollis ornare vel leo. Donec sed odio dui. Nullam quis risus eget ua mollis ornare vel eu leo. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla."})
+    .row
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_10.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_11.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_13.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_12.jpg` alt="gallery image")
+
+  +Banner({title: "Exquisite", subtitle: "Hawaii", img: "banner_4.jpg"})
+
+  +GalleryBlock({title: "Luxurious lifestyle in the Mansion", text: "No matter the task, Freya Inc. is up for it. Cum sociis natoque penatibus et magnis dis parturient bee, nascetur ridiculus mus. Nulla vitae elit libero, pharetra. Integer posuere erat ante venenatis posuere velit aliquet. Etiam wagner moura porta malesuada magna mollis euismod mondar alu aflak."})
+    .row
+      .col-12.mb-4
+        img.w-100(src=`${CWD}assets/img/img_14.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_16.jpg` alt="gallery image")
+      .col-lg-6.mb-4
+        img.w-100(src=`${CWD}assets/img/img_17.jpg` alt="gallery image")
+      .col-12
+        img.w-100(src=`${CWD}assets/img/img_15.jpg` alt="gallery image")

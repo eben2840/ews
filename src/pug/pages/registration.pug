@@ -1,0 +1,15 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Registration
+
+
+block beforeMainContent
+
+append mainContent
+  +Navbar
+  +Registration
+
+  +PreFooter
+  +Footer
+
+
+block afterMainContent

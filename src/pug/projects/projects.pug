@@ -1,0 +1,10 @@
+extends ../layouts/LayoutPages
+include ../mixins/Common/Banner
+include ../mixins/projects/ProjectsGallery
+
+append variables 
+  - var pageHeaderConfig = { img: "projects_header.jpg", title: "Projects", subtitle: "Where love made visible" }
+
+
+append mainContent
+  +ProjectsGallery

@@ -1,0 +1,10 @@
+extends ../layouts/LayoutPages
+include ../mixins/Common/Banner
+include ../mixins/projects/Project
+
+append variables 
+  - var pageHeaderConfig = { img: "projects_header.jpg", title: "Inspiration: Go green", subtitle: "Brooklyn, USA" }
+
+
+append mainContent
+  +Project

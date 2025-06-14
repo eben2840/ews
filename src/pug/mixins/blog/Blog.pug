@@ -1,0 +1,75 @@
+mixin Blog 
+  +Section.pt-9 
+    .row.justify-content-center 
+      .col-lg-8.col-md-10
+        .text-center
+          a(href="#!").text-500 Architecture
+          h2 Inspiration: minsat
+          .mb-4
+            a(href="#!").text-500 George Bellaroza
+            span.px-2 . 
+            a(href="#!").text-500 December 13, 2017
+
+        .text-justify
+          p.mb-4 Who's your source of inspiration when it comes to architectural design? Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+
+          img(src=`${CWD}assets/img/blog_01.jpg` class="img-fluid" alt="blog")
+
+          p.mt-4 Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+
+          p Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+        hr.mt-6.mb-4
+
+        .row
+          .col-auto
+            img.img-thumbnail.rounded-2(src=`${CWD}assets/img/portrait-8.jpg` alt="blog")
+          .col
+            h5.mb-2 George Bellaroza
+            p.text-800 George is the author of The User Experience Revolution and a leader in digital strategy with over 20 years experience. Through 
+              a(href="#!") consultancy, 
+              | speaking, writing, training and mentoring he passionately promotes digital best practice.
+
+        hr.mt-4
+
+        .row.mt-6
+          .col-12
+            h4 Comments
+            .row.my-5
+              .col-auto.text-center
+                img(src=`${CWD}assets/img/portrait-8.jpg` width=50 alt="blog").rounded-circle
+              .col
+                h5.mb-1 Post Heading
+                p.fs--1.text-500 May 15, 2017 at 9:33 am
+                p Their work on our website and Internet marketing has made a significant different to our business. We’ve seen a 425% increase in quote requests from the website which has been pretty remarkable – but I’d always like to see more!
+                a(href="#").d-block.my-3.text-end.me-4 Reply
+                hr.border-300
+
+                .row.my-4
+                  .col-auto.text-center
+                    img(src=`${CWD}assets/img/square-1.jpg` width=50 alt="blog").rounded-circle
+                  .col
+                    h5.mb-1 Post Heading
+                    p.fs--1.text-500 May 15, 2017 at 9:33 am
+                    p Writing case studies was a daunting task for us. We didn’t know where to begin or what questions to ask, and clients never seemed to follow through when we asked. Elixir team did everything – with almost no time or effort for me!
+                    a(href="#").d-block.my-3.text-end.me-4 Reply
+                hr.border-300
+
+            .row.my-4
+              .col-auto.text-center
+                img(src=`${CWD}assets/img/square-2.jpg` width=50 alt="blog").rounded-circle
+              .col
+                h5.mb-1 Post Heading
+                p.fs--1.text-500 May 15, 2017 at 9:33 am
+                p As a sales gamification company, we were skeptical to work with a consultant to optimize our sales emails, but Elixir was highly recommended by many other Y-Combinator startups we knew. Elixir helped us run a ~6 week email campaign that brought us more leads than we had ever seen for a single effort.
+                a(href="#").d-block.my-3.text-end.me-4 Reply
+                hr.border-300
+
+          .col-12
+            h4 Leave A Comment
+            form.mt-4
+              input(type="text" placeholder="Your Name" aria-label="Text input with dropdown button").form-control.bg-white
+              input(type="email" placeholder="Email" aria-label="Text input with dropdown button").form-control.bg-white.mt-4
+              textarea(rows="10" placeholder="Leave your comment here..." aria-label="Text input with dropdown button").form-control.bg-white.mt-4
+              button.btn.btn-primary(type="Submit").mt-4 
+                span.text-white.fw-semi-bold Submit Comment

@@ -1,0 +1,9 @@
+mixin 404
+  +Section({image: `${CWD}assets/img/404.jpg`, className: "overlay"}).text-center.py-0
+    .row.vh-100.align-items-center.text-white
+      .col
+        h1.fs-4.fs-sm-6.fs-md-8.text-white 404
+        h5.text-uppercase.ls.text-white.fs-0.fs-md-1 oops! sosmething's wrong!
+        a(href=`${CWD}index.html`).btn.btn-primary.rounded-pill.mt-4
+          span.fas.fa-home.me-2.fs-0(data-fa-transform="shrink-1 down-1")
+          | Take Me Home

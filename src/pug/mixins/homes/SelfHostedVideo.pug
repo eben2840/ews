@@ -1,0 +1,20 @@
+mixin SelfHostedVideo
+  +Section({
+    image: `${CWD}assets/img/video.jpg`, 
+    video: {
+      mp4: `${CWD}assets/videos/video`,
+      webm: `${CWD}assets/videos/video`,
+    }
+  }).text-white.py-0
+    .row.min-vh-100.justify-content-start.align-items-end.pt-11.pb-6(data-zanim-timeline!={} data-zanim-trigger="scroll")
+      .col
+        .row.align-items-end
+          .col-lg
+            .overflow-hidden
+              p.mb-1.text-uppercase.ls(data-zanim-xs!={from: {opacity: 0, x: -30}, to: {opacity: 1, x: 0}, delay: 0.1}) Upper Chesterfield
+            .overflow-hidden
+              h2.text-white.fw-normal.mb-4.mb-lg-0(data-zanim-xs!={from: {opacity: 0, x: -30}, to: {opacity: 1, x: 0}, delay: 0.0}) Sorption Studio
+          .col.text-lg-end
+            .overflow-hidden
+              div(data-zanim-xs!={from: {opacity: 0, x: -30}, to: {opacity: 1, x: 0}, delay: 0.2})
+                a(href="#").btn.btn-sm.btn-outline-white More about Freya

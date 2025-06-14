@@ -1,0 +1,15 @@
+extends ../layouts/LayoutPages
+include ../mixins/Common/Banner
+include ../mixins/pages/recognition/RecognitionIntro
+include ../mixins/pages/recognition/Clients
+
+append variables 
+  - var pageHeaderConfig = { img: "recognition_header.jpg", title: "Recognitions", subtitle: "Notable Awards" }
+
+
+append mainContent
+  +Section
+    .row.justify-content-center
+      .col-lg-10
+        +RecognitionIntro
+        +Clients

@@ -1,0 +1,41 @@
+mixin Features
+  - 
+    var features = [
+      {
+        title: "Residential",
+        desc: "From Manitoba to Brooklyn, affordable, comfortable and livable houses for families of all shapes and sizes are covered by us. Cras justo odio, dapibus, egestas eget quam lorem ipsum.",
+        img: "img_1.jpg"
+      },
+      {
+        title: "Commercial",
+        desc: "We have also designing interiors for restaurants, bar or office spaces. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dolor.",
+        img: "img_2.jpg"
+      },
+      {
+        title: "Hospitality",
+        desc: "You need your guests to have an unforgettable experience, Freya Inc. is ready to deliver. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus.",
+        img: "img_3.jpg"
+      },
+    ]
+  +Section.bg-white.text-center
+    .row.justify-content-center
+      .col-md-10
+        h3.mb-4 Freya Inc. is the hub for top architects and inventors, ready to turn your imagination into reality
+        p All photographs provided for demo purposes only.
+
+
+    .row.mt-6
+      each feature, index in features 
+        - var isFirst = index === 0
+        +FeatureItem(feature, isFirst)
+
+
+mixin FeatureItem(config, isFirst) 
+  .col-lg-4(class=`${!isFirst ? "mt-4 mt-lg-0" : ""}`)
+    .row.align-items-center
+      .col-md-6.col-lg-12
+        img.img-fluid(src=`${CWD}assets/img/${config.img}` alt=`${config.title}`)
+
+      .col-md-6.col-lg-12.text-md-start.text-lg-center
+        h5.ls.text-uppercase.mt-4.mb-3=config.title
+        p.text-justify=config.desc

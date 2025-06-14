@@ -1,0 +1,8 @@
+mixin GalleryBlock(config) 
+  +Section.text-center 
+    .row.justify-content-center
+      .col-md-10.col-lg-8
+        h3.mb-4=config.title
+        p.mb-7=config.text
+
+    block

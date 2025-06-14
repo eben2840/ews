@@ -1,0 +1,30 @@
+append variables
+	-
+		var social = [
+			{
+				title: "Facebook",
+				link: "#!",
+				icon: "facebook-f"
+			},
+			{
+				title: "Twitter",
+				link: "#!",
+				icon: "twitter"
+			},
+			{
+				title: "Instagram",
+				link: "#!",
+				icon: "instagram"
+			},
+		]
+
+
+mixin PreFooter 
+	+Section.bg-300.py-4.fs-1.text-center
+		each item in social 
+			+SocialItem(item)
+
+
+mixin SocialItem(config)
+	a.d-inline-block.px-2.text-900.fs-1(href=`${config.link}`)
+		span(class=`fab fa-${config.icon}` data-fa-transform="shrink-2")
